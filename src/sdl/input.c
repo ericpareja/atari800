@@ -1322,6 +1322,8 @@ int PLATFORM_Keyboard(void)
 
 	/* Handle CTRL-0 to CTRL-9 and other control characters */
 	if (key_control) {
+		if (lastuni == 0 && lastkey >= SDLK_a && lastkey <= SDLK_z)
+			lastuni = lastkey - SDLK_a + 1;
 		switch(lastuni) {
 		case '.':
 			return AKEY_FULLSTOP|shiftctrl;
