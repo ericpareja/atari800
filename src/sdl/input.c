@@ -880,7 +880,10 @@ int PLATFORM_Keyboard(void)
 				break;
 			case SDLK_j:
 				key_pressed = 0;
-				SwapJoysticks();
+				if (get_key_state(kbhits, SDLK_LCTRL) || get_key_state(kbhits, SDLK_RCTRL))
+				  PLATFORM_ToggleKbdJoystickEnabled(0);
+				else
+				  SwapJoysticks();
 				break;
 			case SDLK_r:
 				UI_alt_function = UI_MENU_RUN;

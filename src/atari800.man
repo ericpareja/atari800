@@ -1627,6 +1627,9 @@ Switch visible horizontal area. See \fB\-horiz\-area\fR.
 .BR LAlt + J
 Swap \fBkeyboard_emulated\fP joysticks
 .TP
+.BR LAlt + Ctrl + J
+Toggle \fBkeyboard_emulated\fP joysticks on or off
+.TP
 .BR LAlt + M
 Grab mouse (prevents mouse pointer from leaving the window)
 
